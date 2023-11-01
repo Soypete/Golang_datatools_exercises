@@ -8,6 +8,7 @@ exercises, activities, and questions for integrating data tools to your go progr
 
 * [Go](https://go.dev/) installed and running
 * Working knowledge of go
+* git for cloning and using the repo
 
 ## New to go?
 
@@ -23,13 +24,9 @@ If you are new to go, work through these exercises first
 
 ### [Exercise 1](/databases/README.md) - Connect a Database to your Go Service
 
-Solution [here](/databases/ex-1-connection/)
+### [Exercise 2](/databases/README.md) - Databases in tests
 
-## Live Demo
-
-Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database/demo/main.go)
-
-### [Exercise 2](/databases/README.md) - database in tests
+I/O operations are cumbersome and should be avoided in unit tests. When you are building service that rely on database conenctions this makes writing unit tests and maintaining good test coverage cumbersome. Using the provided program and functions fix the tests to pass by using a DB mock.
 
 Solution [here](../restful-go/ex-4-tests/framework_test.go)
 
@@ -73,6 +70,12 @@ Make sure to change your connection to the following IP
 		panic(err)
 	}
 ```
+
+---
+
+## Live Demo
+
+Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database/demo/main.go)
 
 ---
 

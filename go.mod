@@ -1,6 +1,6 @@
-module github.com/Soypete/Golang_datatools_exercises
+module github.com/soypete/Golang_datatools_exercises
 
-go 1.21.0
+go 1.21.3
 
 require (
 	github.com/jmoiron/sqlx v1.3.5
