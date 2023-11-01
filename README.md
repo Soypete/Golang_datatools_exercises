@@ -1,4 +1,4 @@
-# Golang_datatools_exercises
+#j Golang_datatools_exercises
 
 exercises, activities, and questions for integrating data tools to your go program
 
@@ -8,6 +8,7 @@ exercises, activities, and questions for integrating data tools to your go progr
 
 * [Go](https://go.dev/) installed and running
 * Working knowledge of go
+* git for cloning and using the repo
 
 ## New to go?
 
@@ -21,19 +22,13 @@ If you are new to go, work through these exercises first
 
 ## Exercises
 
-### [Exercise 1](/databases/README.md) - Connect a Database to your Go Service
+### [Exercise 1](/ex-1-connection/README.md) - Connect a Data base to your Go Service
 
-Solution [here](/databases/ex-1-connection/)
+### [Exercise 2](/ex-2-mocking-db-test/README.md) - Databases in tests
 
-## Live Demo
+### [Exercise 3](/ex-3-streaming/READEME.md) - connect a streaming client
 
-Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database/demo/main.go)
-
-### [Exercise 2](/databases/README.md) - database in tests
-
-Solution [here](../restful-go/ex-4-tests/framework_test.go)
-
-### [Exercise 3](/streaming/READEME.md) - connect a streaming client
+### [Exercise 4](/ex-4-grpc-contracts/README.md) - validate your data contract with grpc
 
 In this solution you will be agregating live event to count the number or user actions that occur. You are provided a database to reference and answer the follow-up question.
 
@@ -73,6 +68,12 @@ Make sure to change your connection to the following IP
 		panic(err)
 	}
 ```
+
+---
+
+## Live Demo
+
+Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database/demo/main.go)
 
 ---
 
