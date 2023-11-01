@@ -1,4 +1,4 @@
-# Golang_datatools_exercises
+#j Golang_datatools_exercises
 
 exercises, activities, and questions for integrating data tools to your go program
 
@@ -22,15 +22,13 @@ If you are new to go, work through these exercises first
 
 ## Exercises
 
-### [Exercise 1](/databases/README.md) - Connect a Database to your Go Service
+### [Exercise 1](/ex-1-connection/README.md) - Connect a Data base to your Go Service
 
-### [Exercise 2](/databases/README.md) - Databases in tests
+### [Exercise 2](/ex-2-mocking-db-test/README.md) - Databases in tests
 
-I/O operations are cumbersome and should be avoided in unit tests. When you are building service that rely on database conenctions this makes writing unit tests and maintaining good test coverage cumbersome. Using the provided program and functions fix the tests to pass by using a DB mock.
+### [Exercise 3](/ex-3-streaming/READEME.md) - connect a streaming client
 
-Solution [here](../restful-go/ex-4-tests/framework_test.go)
-
-### [Exercise 3](/streaming/READEME.md) - connect a streaming client
+### [Exercise 4](/ex-4-grpc-contracts/README.md) - validate your data contract with grpc
 
 In this solution you will be agregating live event to count the number or user actions that occur. You are provided a database to reference and answer the follow-up question.
 

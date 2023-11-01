@@ -8,9 +8,36 @@ import (
 )
 
 type dbPassMock struct{}
+
+func (d *dbPassMock) selectUser(email string) (User, error) {
+	return User{
+		ID:    1,
+		Name:  "Miriah Peterson",
+		Email: "captainnobody1@email.com",
+	}, nil
+}
+
+func (d *dbPassMock) updateUser(user User) error {
+	return nil
+}
+
+func (d *dbPassMock) deleteUser(email string) error {
+	return nil
+}
+
 type dbFailMock struct{}
 
-// TODO: Add more mock here
+func (d *dbFailMock) selectUser(email string) (User, error) {
+	return User{}, fmt.Errorf("Error")
+}
+
+func (d *dbFailMock) updateUser(user User) error {
+	return fmt.Errorf("Error")
+}
+
+func (d *dbFailMock) deleteUser(email string) error {
+	return fmt.Errorf("Error")
+}
 
 func TestUserendpoints(t *testing.T) {
 	t.Run("Get Username: Pass", testPassGetUsername)
