@@ -31,13 +31,13 @@ func main() {
 
 	// setup NATS
 	fmt.Println("Connecting to NATS...")
-	nc, err := nats.Connect("http://localhost:4222")
+	nc, err := nats.Connect("demo.nats.io")
 	if err != nil {
 		panic(err)
 	}
 	time.Sleep(10 * time.Second)
 
-	nc.Subscribe("Actions", handleMessage)
+	nc.Subscribe("hello.world", handleMessage)
 	nc.Flush()
 
 	if err := nc.LastError(); err != nil {
