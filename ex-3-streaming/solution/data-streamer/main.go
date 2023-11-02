@@ -2,7 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
+	"log"
 	"math/rand"
 	"os"
 	"os/signal"
@@ -94,14 +96,24 @@ func messagePublish(nc *nats.Conn) error {
 		return err
 	}
 
+	fmt.Println(string(topic))
 	// publish message
-	nc.Publish("Actions", message)
-
+	nc.Publish(topic, message)
+	log.Printf("Published message: %s\n", message)
 	return nil
 }
 
+var (
+	url   string
+	topic string
+)
+
 func main() {
-	url := "localhost:4222"
+	flag.StringVar(&url, "url", nats.DefaultURL, "The nats server URLs (separated by comma)")
+	flag.StringVar(&topic, "topic", "hello.world", "The nats topic")
+	flag.Parse()
+
+	fmt.Println("url:", url)
 	nc, err := nats.Connect(url)
 	if err != nil {
 		panic(err)
@@ -109,7 +121,6 @@ func main() {
 
 	// symulate users on many devices
 	wg := new(sync.WaitGroup)
-	// 5 go routines
 	wg.Add(1)
 	go func() {
 		for {

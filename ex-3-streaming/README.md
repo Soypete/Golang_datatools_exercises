@@ -27,9 +27,9 @@ The following action types will be used.
 
 Print the answers to the following questions to your standard out.
 
-1.  How many purchases did \_\_ make?
+1.  How many purchases did `user 4` make?
 2.  how many "add item to cart" messages failed?
-3.  Of the total message processed how many were of \_\_\_ type?
+3.  Of the total message processed how many were of `return` type?
 
 Solution [here](solution/main.go)
 

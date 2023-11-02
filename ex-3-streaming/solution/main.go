@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -39,9 +40,16 @@ var (
 	countViewItem            expvar.Int
 	countViewCart            expvar.Int
 	countViewPurchaseHistory expvar.Int
+
+	url   string
+	topic string
 )
 
 func main() {
+	flag.StringVar(&url, "url", nats.DefaultURL, "The nats server URLs (separated by comma)")
+	flag.StringVar(&topic, "topic", "hello.world", "The nats topic")
+	flag.Parse()
+
 	// setup expvar server
 	expvar.Publish("countLogin", &countLogin)
 	expvar.Publish("countLogout", &countLogout)
@@ -55,13 +63,13 @@ func main() {
 
 	// setup NATS
 	fmt.Println("Connecting to NATS...")
-	nc, err := nats.Connect("http://localhost:4222")
+	nc, err := nats.Connect(url)
 	if err != nil {
 		panic(err)
 	}
 	time.Sleep(10 * time.Second)
 
-	nc.Subscribe("Actions", handleMessage)
+	nc.Subscribe(topic, handleMessage)
 	nc.Flush()
 
 	if err := nc.LastError(); err != nil {

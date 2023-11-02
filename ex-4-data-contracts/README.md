@@ -1,8 +1,8 @@
 # Exercise 4: Using gRPC to validate data contract
 
-In this exercise we will be creating and validating Data contracts. We will be using the [protobuf]() + [grpc]() infrastructure to add a first layer of validation. This is a great way to restrict all payloads into a predictable and structured format.
+In this exercise we will be creating and validating Data contracts. We will be using the [protobuf](https://protobuf.dev/) + [grpc](https://grpc.io/) infrastructure to add a first layer of validation. This is a great way to restrict all payloads into a predictable and structured format.
 
-_Note_: This can also be accomplished using [JSON schema](). gRPC is more popular amoung go developers, but there is no conceptual advatange in using `gRPC` over `JSON schema`.
+_Note_: This can also be accomplished using [JSON schema](https://json-schema.org/). gRPC is more popular amoung go developers, but there is no conceptual advatange in using `gRPC` over `JSON schema`.
 
 We are using the same data structures as in the previous streaming examples:
 
