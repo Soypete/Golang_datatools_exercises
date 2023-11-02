@@ -28,7 +28,7 @@ If you are new to go, work through these exercises first
 
 ### [Exercise 3](/ex-3-streaming/READEME.md) - connect a streaming client
 
-### [Exercise 4](/ex-4-grpc-contracts/README.md) - validate your data contract with grpc
+### [Exercise 4](/ex-4-data-contracts/README.md) - validate your data contract with grpc
 
 ---
 
