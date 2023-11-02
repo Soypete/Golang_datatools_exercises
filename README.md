@@ -30,45 +30,6 @@ If you are new to go, work through these exercises first
 
 ### [Exercise 4](/ex-4-grpc-contracts/README.md) - validate your data contract with grpc
 
-In this solution you will be agregating live event to count the number or user actions that occur. You are provided a database to reference and answer the follow-up question.
-
-Using provided [nats subscriber]() subscriber handle messages that come in. Handle the messages by parsing them into a struct. Using the data in the struct, collect stats about the total number of actions that take place for each action type. Below are a set of questions. Use the parsed data to answer the questions. Run your consumer program for 90 seconds to collect the stats and them print the answers to standard out.
-
-```
-type Message struct{
-
-}
-```
-
-The following action types will be used.
-
-```
-
-```
-
-Print the answers to the following questions to your standard out.
-
-1.  How many purchases did \_\_ make?
-2.  how many "add item to cart" messages failed?
-3.  Of the total message processed how many were of \_\_\_ type?
-
-Solution [here]()
-
-_Note_: if you are following this on your own use docker to create a local nats server. That can be done with the following command:
-
-```
-
-```
-
-Make sure to change your connection to the following IP
-
-```
-	nc, err := nats.Connect("http://localhost:4222")
-	if err != nil {
-		panic(err)
-	}
-```
-
 ---
 
 ## Live Demo
