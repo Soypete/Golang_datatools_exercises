@@ -35,7 +35,8 @@ If you are new to go, work through these exercises first
 
 Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database-demo/main.go)
 
-[watch video]()
+[watch goose video](https://youtu.be/3TnEeRttvyo)
+[watch sqlc video](https://youtu.be/X5VGxx4aQAU)
 
 ### grpc-gateway
 
