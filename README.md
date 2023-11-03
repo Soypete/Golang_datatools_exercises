@@ -29,9 +29,17 @@ If you are new to go, work through these exercises first
 
 ---
 
-## Live Demo
+## Live Demos
 
-Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database/demo/main.go)
+### DB Management
+
+Using tools to manage a database. Tools like goose and sqlc can be used to easliy abstract database management into your software stack. The following page is the resulting [code from the live demo](database-demo/main.go)
+
+[watch video]()
+
+### grpc-gateway
+
+Grpc is a valuable tool for managing data contracts. You can leverage grpc-gateway to still maintain restful best practices and accept json payloads while using protobufs to maintain structured data formats. You can view the demo code in [grpc-gateway-demo](/grpc-gateway-demo/main.go)
 
 ---
 
